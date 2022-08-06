@@ -1,24 +1,12 @@
-# README
+# Rails Movies Reviewing System
+This is a rails based application that I have built during my course of Rails 6 by Pragmatic Studios. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## About app 
+- User authentication and authorization built from scratch without using any gem.
+- Active Storage file uploads to Amazon S3
+- Favorites Feature implemented where only authenticated users can like/fav the movies.
+- Categories feature implemented where movies can be categorized based on genre.
+- Hosted using Heroku free tier and PostgreSQL database
+- App uses Multiple through associations to prevent 1+n query problem.
+- Custom scopes are defined using Ruby Lambdas.
+- App consists of Multiple many to many associations & one polymorphic association 
