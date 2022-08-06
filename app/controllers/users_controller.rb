@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  before_save :format_username 
-  
   before_action :require_signin, except: [:new, :create]
   before_action :require_correct_user, only: [:edit, :update, :destroy]
 
@@ -57,9 +55,5 @@ private
     unless current_user?(@user) 
       redirect_to movies_url, alert: "Unauthorized access!"
     end
-  end
-
-  def format_username
-    self.username = username.downcase
   end
 end
