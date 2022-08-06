@@ -1,0 +1,14 @@
+<h1>Sign In</h1>
+<p>
+  No account yet? <%= link_to "Sign up!", signup_path %>
+</p>
+
+<%= form_with(url: session_path, local: true) do |f| %>
+  <%= f.label :username_or_email %>
+  <%= f.text_field :username_or_email, autofocus: true, required: true %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Sign In" %>
+<% end %>
